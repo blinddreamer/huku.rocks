@@ -8,7 +8,7 @@ const MonitorPage = () => {
     <>
       <Animated>
         <div id="monitor">
-          <h1 id="servicesuptimemonitor">Services Uptime Monitor</h1>
+          <h1 id="servicesuptimemonitor">services uptime monitor</h1>
           {/* Add multiple monitors for different services */}
           <div id="uptimeservice">
             <UptimeMonitor service="guacamole.huku.rocks" />
