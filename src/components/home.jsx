@@ -17,7 +17,7 @@ const Home = () => {
       </Helmet>
 
       <Animated>
-        <h1>huku.rocks</h1>
+        <h1 id="hukurocsk">huku.rocks</h1>
         <h2>coming soon-ish.</h2>
       </Animated>
     </>
