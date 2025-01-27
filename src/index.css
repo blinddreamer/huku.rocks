@@ -72,9 +72,9 @@ h2 {
 .flex-navbar,
 .flex-content,
 .flex-footer {
-  min-height: 30%;
   display: flex;
   flex: 1;
+  min-height: 30px;
 }
 
 .flex-navbar {
@@ -88,7 +88,7 @@ h2 {
 .flex-footer {
   align-items: end;
   flex-flow: wrap;
-  margin-top: 140px;
+  margin-top: 225px;
 }
 
 .grid-container {
