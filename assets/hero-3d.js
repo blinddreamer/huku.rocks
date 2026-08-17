@@ -3,6 +3,7 @@
 // never enter frame, with a subtle mouse-driven tilt on the wall itself.
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const canvas = document.getElementById('hero-canvas');
 const fallback = document.getElementById('hero-fallback');
@@ -64,7 +65,11 @@ function frameCamera() {
   camera.updateProjectionMatrix();
 }
 
-new GLTFLoader().load('assets/manchester_graffiti_wall_5.glb', (gltf) => {
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/');
+const loader = new GLTFLoader().setDRACOLoader(dracoLoader);
+
+loader.load('assets/manchester_graffiti_wall_5.glb', (gltf) => {
   const model = gltf.scene;
 
   // Center the model, then align its thinnest axis (the wall's depth) to Z
