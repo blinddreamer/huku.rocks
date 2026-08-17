@@ -33,13 +33,13 @@
 <body>
 
   <main class="hero">
-    <img class="hero-bg" src="assets/mecha-portrait.jpg" alt="" aria-hidden="true" />
+    <canvas class="hero-bg" id="hero-canvas" aria-hidden="true"></canvas>
+    <img class="hero-bg hero-bg-fallback" id="hero-fallback" src="assets/mecha-portrait.jpg" alt="" aria-hidden="true" />
     <div class="hero-gradient"></div>
+    <div class="hero-vignette"></div>
     <div class="hero-grid"></div>
 
     <div class="content">
-      <div class="eyebrow">// personal terminal</div>
-
       <h1 class="wordmark">huku<br>rocks</h1>
 
       <p class="tagline">...perpetually almost done.</p>
@@ -80,9 +80,20 @@
       </nav>
 
       <div class="legal">© 2026 huku.rocks — all rights reserved</div>
+      <div class="credit"><a href="https://sketchfab.com/3d-models/manchester-graffiti-wall-5-5e8c6a51c1394362b3056be039f78ccd" target="_blank" rel="noopener">wall model</a> by Cultural Heritage Imaging, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></div>
     </div>
 
   </main>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="assets/hero-3d.js"></script>
 
   <!-- Statcounter -->
   <script type="text/javascript">
