@@ -55,6 +55,41 @@ body {
   display: none;
 }
 
+.hero-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+}
+
+.hero-loading.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-loading .spinner {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-top-color: rgba(255, 255, 255, 0.5);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-loading .spinner {
+    animation: none;
+    border-top-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
 .hero-gradient {
   position: absolute;
   inset: 0;
@@ -127,11 +162,20 @@ body {
   max-width: 480px;
 }
 
+.hero-footer {
+  position: absolute;
+  z-index: 3;
+  left: clamp(24px, 6vw, 64px);
+  bottom: clamp(20px, 3vh, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .rail {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-top: 6px;
 }
 
 .rail a {
@@ -158,8 +202,6 @@ body {
 }
 
 .legal {
-  margin-top: 14px;
-  padding-top: 14px;
   font-size: 0.75rem;
   letter-spacing: 1.5px;
   color: var(--fg-tertiary);
@@ -167,8 +209,7 @@ body {
 }
 
 .credit {
-  margin-top: 4px;
-  font-size: 0.7rem;
+  font-size: 0.55rem;
   color: var(--fg-tertiary);
 }
 

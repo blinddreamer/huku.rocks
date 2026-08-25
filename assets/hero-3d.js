@@ -7,6 +7,7 @@ import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const canvas = document.getElementById('hero-canvas');
 const fallback = document.getElementById('hero-fallback');
+const loading = document.getElementById('hero-loading');
 const hero = document.querySelector('.hero');
 
 const ZOOM = 1.5; // >1 = closer than a plain cover-fit, hides mesh edges on tilt
@@ -21,7 +22,9 @@ try {
   renderer = null;
 }
 if (!renderer) {
-  // No WebGL: leave the static fallback image showing, do nothing else.
+  // No WebGL: show the static fallback image, do nothing else.
+  fallback.style.display = 'block';
+  loading.classList.add('is-hidden');
   throw new Error('WebGL unavailable, using fallback image');
 }
 
@@ -91,12 +94,14 @@ loader.load('assets/manchester_graffiti_wall_5.glb', (gltf) => {
   target = rig;
   resize();
 
+  loading.classList.add('is-hidden');
   if (!reduceMotion) renderer.setAnimationLoop(animate);
   else renderer.render(scene, camera);
 }, undefined, () => {
   // Load/parse failure: fall back to the static image.
-  fallback.style.display = '';
+  fallback.style.display = 'block';
   canvas.style.display = 'none';
+  loading.classList.add('is-hidden');
 });
 
 function animate() {
