@@ -7,6 +7,7 @@
   <meta name="description" content="Huku. Builds things, breaks things, occasionally documents the difference. Mostly found shipping code at odd hours and losing internet spaceships on purpose." />
   <link rel="canonical" href="https://huku.rocks/" />
   <meta name="theme-color" content="#0a0a0a" />
+  <meta name="color-scheme" content="dark" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="huku.rocks" />
@@ -27,13 +28,14 @@
   <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <noscript><style>.hero-bg { opacity: 1; }</style></noscript>
 </head>
 <body>
 
   <main class="hero">
-    <img class="hero-bg" src="assets/leake-street.webp" alt="" aria-hidden="true" />
+    <img class="hero-bg" src="assets/leake-street.webp" alt="" aria-hidden="true" fetchpriority="high" onload="this.classList.add('loaded')" />
     <div class="hero-gradient"></div>
     <div class="hero-vignette"></div>
     <div class="hero-grid"></div>
@@ -41,7 +43,7 @@
     <div class="content">
       <h1 class="wordmark">huku<br>rocks</h1>
 
-      <p class="tagline">...perpetually almost done.</p>
+      <p class="tagline">…perpetually almost done.</p>
 
       <p class="bio">Huku. Builds things, breaks things, occasionally documents the difference. Mostly found shipping code at odd hours and losing internet spaceships on purpose.</p>
 
@@ -55,9 +57,9 @@
           </svg>
         </a>
 
-        <a href="https://x.com/HukuA" target="_blank" rel="noopener" aria-label="twitter" title="twitter">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-            <path d="M3 3l18 18M21 3L3 21"/>
+        <a href="https://x.com/HukuA" target="_blank" rel="noopener" aria-label="x" title="x">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/>
           </svg>
         </a>
 
@@ -81,8 +83,8 @@
         </a>
       </nav>
 
-      <div class="legal">© 2026 huku.rocks — all rights reserved</div>
-      <div class="credit"><a href="https://commons.wikimedia.org/wiki/File:Graffiti_@_Leake_Street_Arches,_London_23.jpg" target="_blank" rel="noopener">photo</a> by Owen Tudor1, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></div>
+      <div class="legal">© 2026 huku.rocks</div>
+      <div class="credit"><a href="https://commons.wikimedia.org/wiki/File:Graffiti_@_Leake_Street_Arches,_London_23.jpg" target="_blank" rel="noopener">photo</a> by Owen Tudor1, edited, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></div>
     </div>
 
   </main>
