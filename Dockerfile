@@ -1,4 +1,7 @@
 FROM nginx:alpine
+
+# Pull Alpine security fixes not yet in the base image
+RUN apk upgrade --no-cache
 COPY index.html     /usr/share/nginx/html/index.html
 COPY style.css      /usr/share/nginx/html/style.css
 COPY favicon.ico        /usr/share/nginx/html/favicon.ico
