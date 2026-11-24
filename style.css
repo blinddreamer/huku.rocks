@@ -42,11 +42,9 @@ body { background: var(--bg-page); }
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: saturate(0.35) sepia(0.15) contrast(1.25) brightness(0.8);
   z-index: 0;
   opacity: 0;
-  transition: opacity 400ms ease-out;
+  transition: opacity 600ms ease-out;
 }
 
 .hero-bg.loaded { opacity: 1; }
@@ -182,20 +180,9 @@ body { background: var(--bg-page); }
   color: var(--fg-tertiary);
 }
 
-.credit {
-  font-size: 0.7rem;
-  color: var(--fg-tertiary);
-}
-
-.credit a {
-  color: inherit;
-  text-decoration: none;
-}
-
 @media (hover: hover) and (pointer: fine) {
   .rail a:hover {
     background: var(--hover-fill);
     border-color: var(--border-hover);
   }
-  .credit a:hover { text-decoration: underline; }
 }

@@ -30,12 +30,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <noscript><style>.hero-bg { opacity: 1; }</style></noscript>
+  <script src="assets/blackhole.js" defer></script>
 </head>
 <body>
 
   <main class="hero">
-    <img class="hero-bg" src="assets/leake-street.webp" alt="" aria-hidden="true" fetchpriority="high" onload="this.classList.add('loaded')" />
+    <canvas class="hero-bg" id="bh" aria-hidden="true"></canvas>
     <div class="hero-gradient"></div>
     <div class="hero-vignette"></div>
     <div class="hero-grid"></div>
@@ -84,7 +84,6 @@
       </nav>
 
       <div class="legal">© 2026 huku.rocks</div>
-      <div class="credit"><a href="https://commons.wikimedia.org/wiki/File:Graffiti_@_Leake_Street_Arches,_London_23.jpg" target="_blank" rel="noopener">photo</a> by Owen Tudor1, edited, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></div>
     </div>
 
   </main>
